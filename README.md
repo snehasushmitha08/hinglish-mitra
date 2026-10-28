@@ -4,14 +4,14 @@
 
 Hinglish Mitra is a local writing assistant built with AI4Bharat IndicXlit and BharatGen Param1. It combines script conversion, alternative word spellings, an editable draft, and AI rewriting in one interface. Qwen is available as an experimental comparison model.
 
-For example, `mujhe paani chahiye` becomes `मुझे पानी चाहिए`. This is **transliteration**: the language stays Hindi while the script changes. Rewriting is a separate step that can suggest grammar and phrasing changes.
+For example, `mujhe paani chahiye` becomes `मुझे पानी चाहिए`. This is **transliteration**: the language stays Hindi while the script changes. Rewriting is a separate step that suggests grammar and phrasing changes.
 
 ## What it does
 
 - **Convert:** turn Roman Hindi into Hindi script, including text with English loanwords.
-- **Choose spellings:** inspect up to ten alternatives for a word when the first conversion is wrong.
+- **Choose spellings:** inspect up to ten alternatives when a word is converted incorrectly.
 - **Edit:** correct the Hindi draft directly before requesting a rewrite.
-- **Compare:** switch between Param1 and Qwen, with the draft and suggestion kept separate.
+- **Compare:** switch between Param1 and Qwen, keeping the draft and suggestion separate.
 - **Evaluate:** run a fixed 40-case test set and export outputs, errors, and timings.
 
 English translation is not included. Writing suggestions can be wrong, so the final wording remains the user's decision.
@@ -27,7 +27,7 @@ English translation is not included. Writing suggestions can be wrong, so the fi
 
 The Windows app calls the WSL service over localhost. Both writing models use 4-bit NF4 quantization; only one is loaded at a time. All models are pretrained—no training or fine-tuning is performed.
 
-Separate Python environments accommodate IndicXlit's older dependencies alongside the newer GPU stack. The final rewriting prompt uses the Hindi draft alone, selected after a small development comparison with Roman-context prompting.
+Separate Python environments accommodate IndicXlit's older dependencies alongside the newer GPU stack. The final rewriting prompt uses the Hindi draft alone, selected after a development comparison with Roman-context prompting.
 
 ## Getting started
 
@@ -146,7 +146,7 @@ python evaluate.py
 
 Results are saved in a timestamped folder. Each writing model receives the actual IndicXlit output; manual spelling corrections are excluded. [Recorded results](evaluation_20261029_013004_568731/) include raw outputs and metrics. [Development experiments](prompt_comparison.csv) are separate from this final set.
 
-Conversion scores do not measure rewriting quality. The [AI-assisted writing review](AI_assisted_evaluation_review.md) assesses grammar and meaning separately; only the student corrections explicitly recorded there are confirmed.
+Conversion scores do not measure rewriting quality. The [writing review](AI_assisted_evaluation_review.md) assesses grammar and meaning separately. All 80 AI-assisted ratings were checked and confirmed by the project author, with meaning-preservation corrections for T05, T15, and T31 applied to both models.
 
 ## Known limitations
 
