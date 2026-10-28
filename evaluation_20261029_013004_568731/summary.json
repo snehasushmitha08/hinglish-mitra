@@ -1,0 +1,17 @@
+{
+  "test_cases": 40,
+  "successful_transliterations": 40,
+  "failed_transliterations": 0,
+  "normalization": "Unicode NFC; punctuation replaced with spaces; whitespace collapsed. Spelling and case preserved.",
+  "transliteration_metrics_on_successful_requests": {
+    "corpus_CER": 0.08424908424908426,
+    "corpus_WER": 0.25268817204301075,
+    "normalized_exact_matches": 11,
+    "normalized_exact_match_rate": 0.275,
+    "mean_request_seconds": 2.5089627124994878
+  },
+  "completed_rewrites": 80,
+  "failed_or_skipped_rewrites": 0,
+  "rewriting_quality": "Pending human review.",
+  "workflow": "Automatic pipeline: rewriting receives the actual IndicXlit output, with no manual candidate selection."
+}

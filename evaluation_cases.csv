@@ -1,0 +1,41 @@
+id,category,roman_input,transliteration_reference,writing_reference
+T01,everyday,aaj mausam accha hai,आज मौसम अच्छा है,आज मौसम अच्छा है।
+T02,everyday,mujhe paani chahiye,मुझे पानी चाहिए,मुझे पानी चाहिए।
+T03,everyday,darwaza band kar do,दरवाज़ा बंद कर दो,दरवाज़ा बंद कर दो।
+T04,everyday,hum shaam ko milenge,हम शाम को मिलेंगे,हम शाम को मिलेंगे।
+T05,everyday,kya tum ghar par ho,क्या तुम घर पर हो,क्या तुम घर पर हो?
+T06,everyday,mujhe tumhari madad chahiye,मुझे तुम्हारी मदद चाहिए,मुझे तुम्हारी मदद चाहिए।
+T07,everyday,yeh rasta kahan jata hai,यह रास्ता कहाँ जाता है,यह रास्ता कहाँ जाता है?
+T08,everyday,kripya dheere boliye,कृपया धीरे बोलिए,कृपया धीरे बोलिए।
+T09,everyday,main abhi vyast hoon,मैं अभी व्यस्त हूँ,मैं अभी व्यस्त हूँ।
+T10,everyday,humein samay par pahunchna hai,हमें समय पर पहुँचना है,हमें समय पर पहुँचना है।
+T11,grammar,meri kamra saaf hai,मेरी कमरा साफ है,मेरा कमरा साफ है।
+T12,grammar,mera ghadi band hai,मेरा घड़ी बंद है,मेरी घड़ी बंद है।
+T13,grammar,ladkiyan gaana gaa raha hai,लड़कियाँ गाना गा रहा है,लड़कियाँ गाना गा रहे हैं।
+T14,grammar,ladke bazaar ja rahi hai,लड़के बाज़ार जा रही है,लड़के बाज़ार जा रहे हैं।
+T15,grammar,yeh phool bahut sundar hain,यह फूल बहुत सुंदर हैं,यह फूल बहुत सुंदर है।
+T16,grammar,mujhe teen kitab chahiye,मुझे तीन किताब चाहिए,मुझे तीन किताबें चाहिए।
+T17,grammar,hum kal bazaar gaya tha,हम कल बाजार गया था,हम कल बाजार गए थे।
+T18,grammar,aap kahan ja raha hai,आप कहाँ जा रहा है,आप कहाँ जा रहे हैं?
+T19,grammar,uski naam kavita hai,उसकी नाम कविता है,उसका नाम कविता है।
+T20,grammar,meri joota kho gaya,मेरी जूता खो गया,मेरा जूता खो गया।
+T21,mixed,mujhe assignment submit karna hai,मुझे असाइनमेंट सबमिट करना है,मुझे असाइनमेंट सबमिट करना है।
+T22,mixed,kal online class hogi,कल ऑनलाइन क्लास होगी,कल ऑनलाइन क्लास होगी।
+T23,mixed,mera laptop charge nahi ho raha,मेरा लैपटॉप चार्ज नहीं हो रहा,मेरा लैपटॉप चार्ज नहीं हो रहा।
+T24,mixed,please mujhe message bhej dena,प्लीज मुझे मैसेज भेज देना,कृपया मुझे मैसेज भेज देना।
+T25,mixed,maine file download kar li hai,मैंने फाइल डाउनलोड कर ली है,मैंने फाइल डाउनलोड कर ली है।
+T26,mixed,internet bahut slow hai,इंटरनेट बहुत स्लो है,इंटरनेट बहुत धीमा है।
+T27,mixed,project ki deadline paas hai,प्रोजेक्ट की डेडलाइन पास है,प्रोजेक्ट की समय सीमा पास है।
+T28,mixed,mujhe password yaad nahi hai,मुझे पासवर्ड याद नहीं है,मुझे पासवर्ड याद नहीं है।
+T29,mixed,meeting ka link bhej do,मीटिंग का लिंक भेज दो,मीटिंग का लिंक भेज दो।
+T30,mixed,phone ki battery khatam hai,फोन की बैटरी खत्म है,फोन की बैटरी खत्म है।
+T31,details,anita kal pune jayegi,अनीता कल पुणे जाएगी,अनीता कल पुणे जाएगी।
+T32,details,rahul ne 3 kitab kharidi,राहुल ने 3 किताब खरीदी,राहुल ने 3 किताबें खरीदीं।
+T33,details,mujhe 500 rupaye nahi mile,मुझे 500 रुपये नहीं मिले,मुझे 500 रुपये नहीं मिले।
+T34,details,pariksha 12 november ko hai,परीक्षा 12 नवंबर को है,परीक्षा 12 नवंबर को है।
+T35,details,bus 8 baje aayegi,बस 8 बजे आएगी,बस 8 बजे आएगी।
+T36,details,priya aur aman jaipur mein hain,प्रिया और अमन जयपुर में हैं,प्रिया और अमन जयपुर में हैं।
+T37,details,kamra 204 khali nahi hai,कमरा 204 खाली नहीं है,कमरा 204 खाली नहीं है।
+T38,details,mere paas 2 ticket hain,मेरे पास 2 टिकट हैं,मेरे पास 2 टिकट हैं।
+T39,details,suman ne dava nahi li,सुमन ने दवा नहीं ली,सुमन ने दवा नहीं ली।
+T40,details,train 15 minute der se aayi,ट्रेन 15 मिनट देर से आई,ट्रेन 15 मिनट देर से आई।

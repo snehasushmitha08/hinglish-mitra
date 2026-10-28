@@ -1,0 +1,45 @@
+# Python environments and generated caches
+.venv/
+.venv-xlit/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Credentials and local secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Downloaded model files
+.cache/
+models/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# Local interactive logs: publish only reviewed evaluation data
+rewrite_results*.csv
+param-development-results.txt
+
+# Editor and OS metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Separate submission materials are not part of the source repository
+REPORT.md
+DEMO_SCRIPT.md
+
+# Old dependency snapshots and exploratory scripts
+/requirements-working.txt
+/requirements-xlit-working.txt
+/test_param.py
+/test_param_compare.py
+/test_qwen.py
+/test_xlit.py

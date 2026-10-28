@@ -1,0 +1,401 @@
+﻿id,category,model,roman_input,actual_transliteration,writing_reference,suggested_rewrite,generation_seconds,model_load_seconds,request_seconds_including_load,status,error,grammar_fluency_1_to_5,meaning_preserved_yes_no,review_notes
+T01,everyday,BharatGen Param1,aaj mausam accha hai,आज मौसम अच्छा है,आज मौसम अच्छा है।,आज मौसम अच्छा है।,3.49,19.7,23.524,"Model: BharatGen Param1
+Generation: 3.49 seconds
+Model loading/switching: 19.70 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T02,everyday,BharatGen Param1,mujhe paani chahiye,मुझे पानी चाहिए,मुझे पानी चाहिए।,मुझे पानी चाहिए।,0.66,0.0,0.659,"Model: BharatGen Param1
+Generation: 0.66 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T03,everyday,BharatGen Param1,darwaza band kar do,दरवाजा बंद कर डीओ,दरवाज़ा बंद कर दो।,दरवाजा बंद कर डीओ,0.87,0.0,0.876,"Model: BharatGen Param1
+Generation: 0.87 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T04,everyday,BharatGen Param1,hum shaam ko milenge,हम शाम को मिलेंगे,हम शाम को मिलेंगे।,हम शाम को मिलेंगे।,0.72,0.0,0.721,"Model: BharatGen Param1
+Generation: 0.72 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T05,everyday,BharatGen Param1,kya tum ghar par ho,क्या टम घर पर हो,क्या तुम घर पर हो?,क्या टम घर पर है?,0.89,0.0,0.892,"Model: BharatGen Param1
+Generation: 0.89 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T06,everyday,BharatGen Param1,mujhe tumhari madad chahiye,मुझे तुम्हारी मदद चाहिए,मुझे तुम्हारी मदद चाहिए।,मुझे तुम्हारी मदद चाहिए।,0.78,0.0,0.787,"Model: BharatGen Param1
+Generation: 0.78 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T07,everyday,BharatGen Param1,yeh rasta kahan jata hai,येह रस्ता कहन जाता है,यह रास्ता कहाँ जाता है?,यह मार्ग कहता है।,0.86,0.0,0.866,"Model: BharatGen Param1
+Generation: 0.86 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T08,everyday,BharatGen Param1,kripya dheere boliye,कृप्या धीरे बोलिए,कृपया धीरे बोलिए।,कृपया धीरे बोलिए।,1.1,0.0,1.101,"Model: BharatGen Param1
+Generation: 1.10 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T09,everyday,BharatGen Param1,main abhi vyast hoon,मैन अभि व्यस्त हूँ,मैं अभी व्यस्त हूँ।,मैं व्यस्त हूँ।,0.73,0.0,0.73,"Model: BharatGen Param1
+Generation: 0.73 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T10,everyday,BharatGen Param1,humein samay par pahunchna hai,हुमें समय पर पहुंचना है,हमें समय पर पहुँचना है।,हुएं समय पर पहुंचना है,0.81,0.0,0.817,"Model: BharatGen Param1
+Generation: 0.81 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T11,grammar,BharatGen Param1,meri kamra saaf hai,मेरी कामरा साफ है,मेरा कमरा साफ है।,मेरी कामरा साफ है,0.68,0.0,0.679,"Model: BharatGen Param1
+Generation: 0.68 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T12,grammar,BharatGen Param1,mera ghadi band hai,मेरा घड़ी बंद है,मेरी घड़ी बंद है।,मेरी घड़ी बंद है,0.66,0.0,0.669,"Model: BharatGen Param1
+Generation: 0.66 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T13,grammar,BharatGen Param1,ladkiyan gaana gaa raha hai,लड़कियां गाना गा रहा है,लड़कियाँ गाना गा रहे हैं।,लड़कियां गाना गा रही हैं,0.89,0.0,0.89,"Model: BharatGen Param1
+Generation: 0.89 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T14,grammar,BharatGen Param1,ladke bazaar ja rahi hai,लड़के बज़ार जा रही है,लड़के बाज़ार जा रहे हैं।,लड़के बाजार जा रहे हैं,0.78,0.0,0.788,"Model: BharatGen Param1
+Generation: 0.78 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T15,grammar,BharatGen Param1,yeh phool bahut sundar hain,येह फूल बहुत सुंदर हैं,यह फूल बहुत सुंदर है।,ये फूल बहुत सुंदर हैं।,0.92,0.0,0.919,"Model: BharatGen Param1
+Generation: 0.92 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T16,grammar,BharatGen Param1,mujhe teen kitab chahiye,मुझे टीन किताब चाहिए,मुझे तीन किताबें चाहिए।,मुझे टीन किताब चाहिए।,0.96,0.0,0.967,"Model: BharatGen Param1
+Generation: 0.96 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T17,grammar,BharatGen Param1,hum kal bazaar gaya tha,हम कल बज़ार गया था,हम कल बाजार गए थे।,हम कल बज़ार गए थे।,0.88,0.0,0.886,"Model: BharatGen Param1
+Generation: 0.88 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T18,grammar,BharatGen Param1,aap kahan ja raha hai,आप कहन जा रहा है,आप कहाँ जा रहे हैं?,आप कह रहे हैं,0.56,0.0,0.56,"Model: BharatGen Param1
+Generation: 0.56 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T19,grammar,BharatGen Param1,uski naam kavita hai,उसकी नाम कविता है,उसका नाम कविता है।,उसका नाम कविता है।,0.97,0.0,0.971,"Model: BharatGen Param1
+Generation: 0.97 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T20,grammar,BharatGen Param1,meri joota kho gaya,मेरी जूता खो गया,मेरा जूता खो गया।,मेरी जूता खो गई,0.77,0.0,0.774,"Model: BharatGen Param1
+Generation: 0.77 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T21,mixed,BharatGen Param1,mujhe assignment submit karna hai,मुझे असाइनमेंट सबमिट करना है,मुझे असाइनमेंट सबमिट करना है।,मुझे असाइनमेंट सबमिट करना है।,1.27,0.0,1.27,"Model: BharatGen Param1
+Generation: 1.27 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T22,mixed,BharatGen Param1,kal online class hogi,कल ओनलाइन क्लास होगी,कल ऑनलाइन क्लास होगी।,कल ऑनलाइन क्लास होगी।,0.81,0.0,0.818,"Model: BharatGen Param1
+Generation: 0.81 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T23,mixed,BharatGen Param1,mera laptop charge nahi ho raha,मेरा लैपटॉप चार्ज नही हो रहा,मेरा लैपटॉप चार्ज नहीं हो रहा।,मेरा लैपटॉप चार्ज नही हो रहा है।,1.51,0.0,1.511,"Model: BharatGen Param1
+Generation: 1.51 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T24,mixed,BharatGen Param1,please mujhe message bhej dena,प्लीज मुझे मेसेज भेज देना,कृपया मुझे मैसेज भेज देना।,कृपया मुझे संदेश भेजें।,1.06,0.0,1.068,"Model: BharatGen Param1
+Generation: 1.06 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T25,mixed,BharatGen Param1,maine file download kar li hai,मैने फाइल डाउनलोड कर ली है,मैंने फाइल डाउनलोड कर ली है।,मैंने फाइल डाउनलोड कर ली है।,1.18,0.0,1.18,"Model: BharatGen Param1
+Generation: 1.18 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T26,mixed,BharatGen Param1,internet bahut slow hai,इंटरनेट बहुत स्लो है,इंटरनेट बहुत धीमा है।,इंटरनेट बहुत धीमा है।,1.13,0.0,1.134,"Model: BharatGen Param1
+Generation: 1.13 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T27,mixed,BharatGen Param1,project ki deadline paas hai,प्रोजेक्ट की डेडलाइन पास है,प्रोजेक्ट की समय सीमा पास है।,प्रोजेक्ट की डेडलाइन पास है।,1.31,0.0,1.313,"Model: BharatGen Param1
+Generation: 1.31 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T28,mixed,BharatGen Param1,mujhe password yaad nahi hai,मुझे पासवर्ड याद नही है,मुझे पासवर्ड याद नहीं है।,मुझे पासवर्ड याद नही है,0.95,0.0,0.954,"Model: BharatGen Param1
+Generation: 0.95 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T29,mixed,BharatGen Param1,meeting ka link bhej do,मीटिंग का लिंक भेज डीओ,मीटिंग का लिंक भेज दो।,मीटिंग का लिंक भेज दिया गया है।,1.14,0.0,1.143,"Model: BharatGen Param1
+Generation: 1.14 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T30,mixed,BharatGen Param1,phone ki battery khatam hai,फोन की बैटरी खतम है,फोन की बैटरी खत्म है।,फोन की बैटरी खत्म हो गई है।,1.25,0.0,1.249,"Model: BharatGen Param1
+Generation: 1.25 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T31,details,BharatGen Param1,anita kal pune jayegi,अनिता कल पुने जाएगी,अनीता कल पुणे जाएगी।,अनिता कल पुणे जाएगी।,0.87,0.0,0.868,"Model: BharatGen Param1
+Generation: 0.87 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T32,details,BharatGen Param1,rahul ne 3 kitab kharidi,राहुल ने ३ किताब खरीदी,राहुल ने 3 किताबें खरीदीं।,राहुल ने ३ किताबें खरीदी।,1.09,0.0,1.09,"Model: BharatGen Param1
+Generation: 1.09 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T33,details,BharatGen Param1,mujhe 500 rupaye nahi mile,मुझे ५०० रुपये नही माइल,मुझे 500 रुपये नहीं मिले।,मुझे ५०० रुपये नहीं माइल,1.06,0.0,1.064,"Model: BharatGen Param1
+Generation: 1.06 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T34,details,BharatGen Param1,pariksha 12 november ko hai,परीक्षा १२ नवेम्बर को है,परीक्षा 12 नवंबर को है।,परीक्षा १२ नवंबर को है।,1.09,0.0,1.093,"Model: BharatGen Param1
+Generation: 1.09 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T35,details,BharatGen Param1,bus 8 baje aayegi,बस ८ बाजे आयेगी,बस 8 बजे आएगी।,बस आठ बजे आएगी।,0.76,0.0,0.759,"Model: BharatGen Param1
+Generation: 0.76 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T36,details,BharatGen Param1,priya aur aman jaipur mein hain,प्रिया और अमन जयपुर में हैं,प्रिया और अमन जयपुर में हैं।,प्रिया और अमन जयपुर में हैं।,1.17,0.0,1.175,"Model: BharatGen Param1
+Generation: 1.17 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T37,details,BharatGen Param1,kamra 204 khali nahi hai,कामरा २०४ खाली नही है,कमरा 204 खाली नहीं है।,कामरा २०४ खाली नहीं है,1.12,0.0,1.12,"Model: BharatGen Param1
+Generation: 1.12 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T38,details,BharatGen Param1,mere paas 2 ticket hain,मेरे पास २ टिकेट हैं,मेरे पास 2 टिकट हैं।,मेरे पास २ टिकट हैं।,1.0,0.0,1.005,"Model: BharatGen Param1
+Generation: 1.00 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T39,details,BharatGen Param1,suman ne dava nahi li,सुमन ने दावा नही ली,सुमन ने दवा नहीं ली।,सुमन ने दावा नहीं किया,0.67,0.0,0.671,"Model: BharatGen Param1
+Generation: 0.67 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T40,details,BharatGen Param1,train 15 minute der se aayi,ट्रेन १५ मिन्यूट डेर से आयी,ट्रेन 15 मिनट देर से आई।,ट्रेन १५ मिन्यूट डेर से आयी,1.43,0.0,1.434,"Model: BharatGen Param1
+Generation: 1.43 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T01,everyday,Qwen — experimental comparison,aaj mausam accha hai,आज मौसम अच्छा है,आज मौसम अच्छा है।,आज मौसम अच्छा है।,3.41,17.18,21.308,"Model: Qwen — experimental comparison
+Generation: 3.41 seconds
+Model loading/switching: 17.18 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T02,everyday,Qwen — experimental comparison,mujhe paani chahiye,मुझे पानी चाहिए,मुझे पानी चाहिए।,मुझे पानी चाहिए।,1.72,0.0,1.725,"Model: Qwen — experimental comparison
+Generation: 1.72 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T03,everyday,Qwen — experimental comparison,darwaza band kar do,दरवाजा बंद कर डीओ,दरवाज़ा बंद कर दो।,दरवाजा बंद कर डीओ।,2.11,0.0,2.11,"Model: Qwen — experimental comparison
+Generation: 2.11 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T04,everyday,Qwen — experimental comparison,hum shaam ko milenge,हम शाम को मिलेंगे,हम शाम को मिलेंगे।,हम शाम को मिलेंगे।,1.88,0.0,1.888,"Model: Qwen — experimental comparison
+Generation: 1.88 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T05,everyday,Qwen — experimental comparison,kya tum ghar par ho,क्या टम घर पर हो,क्या तुम घर पर हो?,क्या टम घर पर है?,1.75,0.0,1.75,"Model: Qwen — experimental comparison
+Generation: 1.75 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T06,everyday,Qwen — experimental comparison,mujhe tumhari madad chahiye,मुझे तुम्हारी मदद चाहिए,मुझे तुम्हारी मदद चाहिए।,मुझे आपकी मदद चाहिए।,2.09,0.0,2.094,"Model: Qwen — experimental comparison
+Generation: 2.09 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T07,everyday,Qwen — experimental comparison,yeh rasta kahan jata hai,येह रस्ता कहन जाता है,यह रास्ता कहाँ जाता है?,यह रस्ता कहलाता है।,2.07,0.0,2.073,"Model: Qwen — experimental comparison
+Generation: 2.07 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T08,everyday,Qwen — experimental comparison,kripya dheere boliye,कृप्या धीरे बोलिए,कृपया धीरे बोलिए।,कृपया धीरे-धीरे बोलिए।,2.43,0.0,2.434,"Model: Qwen — experimental comparison
+Generation: 2.43 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T09,everyday,Qwen — experimental comparison,main abhi vyast hoon,मैन अभि व्यस्त हूँ,मैं अभी व्यस्त हूँ।,मैं अभी व्यस्त हूँ,2.45,0.0,2.454,"Model: Qwen — experimental comparison
+Generation: 2.45 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T10,everyday,Qwen — experimental comparison,humein samay par pahunchna hai,हुमें समय पर पहुंचना है,हमें समय पर पहुँचना है।,हमें समय पर पहुंचना है।,2.49,0.0,2.489,"Model: Qwen — experimental comparison
+Generation: 2.49 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T11,grammar,Qwen — experimental comparison,meri kamra saaf hai,मेरी कामरा साफ है,मेरा कमरा साफ है।,मेरा कमरा साफ है।,2.19,0.0,2.196,"Model: Qwen — experimental comparison
+Generation: 2.19 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T12,grammar,Qwen — experimental comparison,mera ghadi band hai,मेरा घड़ी बंद है,मेरी घड़ी बंद है।,मेरा घड़ी बंद है नहीं।,3.08,0.0,3.08,"Model: Qwen — experimental comparison
+Generation: 3.08 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T13,grammar,Qwen — experimental comparison,ladkiyan gaana gaa raha hai,लड़कियां गाना गा रहा है,लड़कियाँ गाना गा रहे हैं।,लड़कियां गाना गा रही हैं।,3.33,0.0,3.337,"Model: Qwen — experimental comparison
+Generation: 3.33 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T14,grammar,Qwen — experimental comparison,ladke bazaar ja rahi hai,लड़के बज़ार जा रही है,लड़के बाज़ार जा रहे हैं।,लड़के बाज़ार जा रहे हैं,3.15,0.0,3.149,"Model: Qwen — experimental comparison
+Generation: 3.15 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T15,grammar,Qwen — experimental comparison,yeh phool bahut sundar hain,येह फूल बहुत सुंदर हैं,यह फूल बहुत सुंदर है।,यह फूल बहुत सुंदर है।,2.76,0.0,2.763,"Model: Qwen — experimental comparison
+Generation: 2.76 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T16,grammar,Qwen — experimental comparison,mujhe teen kitab chahiye,मुझे टीन किताब चाहिए,मुझे तीन किताबें चाहिए।,मुझे टीन किताब चाहिए।,2.49,0.0,2.496,"Model: Qwen — experimental comparison
+Generation: 2.49 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T17,grammar,Qwen — experimental comparison,hum kal bazaar gaya tha,हम कल बज़ार गया था,हम कल बाजार गए थे।,हम कल बाज़ार गए थे,2.5,0.0,2.503,"Model: Qwen — experimental comparison
+Generation: 2.50 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T18,grammar,Qwen — experimental comparison,aap kahan ja raha hai,आप कहन जा रहा है,आप कहाँ जा रहे हैं?,आप कह रहे हैं।,2.09,0.0,2.091,"Model: Qwen — experimental comparison
+Generation: 2.09 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T19,grammar,Qwen — experimental comparison,uski naam kavita hai,उसकी नाम कविता है,उसका नाम कविता है।,उसका नाम कविता है।,2.25,0.0,2.25,"Model: Qwen — experimental comparison
+Generation: 2.25 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T20,grammar,Qwen — experimental comparison,meri joota kho gaya,मेरी जूता खो गया,मेरा जूता खो गया।,मेरा जूता खो गया है।,2.87,0.0,2.872,"Model: Qwen — experimental comparison
+Generation: 2.87 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T21,mixed,Qwen — experimental comparison,mujhe assignment submit karna hai,मुझे असाइनमेंट सबमिट करना है,मुझे असाइनमेंट सबमिट करना है।,मुझे असाइनमेंट सबमिट करना है।,3.51,0.0,3.515,"Model: Qwen — experimental comparison
+Generation: 3.51 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T22,mixed,Qwen — experimental comparison,kal online class hogi,कल ओनलाइन क्लास होगी,कल ऑनलाइन क्लास होगी।,कल ऑनलाइन क्लास होगी।,2.62,0.0,2.62,"Model: Qwen — experimental comparison
+Generation: 2.62 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T23,mixed,Qwen — experimental comparison,mera laptop charge nahi ho raha,मेरा लैपटॉप चार्ज नही हो रहा,मेरा लैपटॉप चार्ज नहीं हो रहा।,मेरा लैपटॉप चार्ज नहीं हो रहा है।,4.59,0.0,4.594,"Model: Qwen — experimental comparison
+Generation: 4.59 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T24,mixed,Qwen — experimental comparison,please mujhe message bhej dena,प्लीज मुझे मेसेज भेज देना,कृपया मुझे मैसेज भेज देना।,कृपया मुझे संदेश भेज दें।,2.91,0.0,2.914,"Model: Qwen — experimental comparison
+Generation: 2.91 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T25,mixed,Qwen — experimental comparison,maine file download kar li hai,मैने फाइल डाउनलोड कर ली है,मैंने फाइल डाउनलोड कर ली है।,मैंने फाइल डाउनलोड कर ली है।,3.6,0.0,3.601,"Model: Qwen — experimental comparison
+Generation: 3.60 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T26,mixed,Qwen — experimental comparison,internet bahut slow hai,इंटरनेट बहुत स्लो है,इंटरनेट बहुत धीमा है।,इंटरनेट बहुत धीमा है।,2.73,0.0,2.732,"Model: Qwen — experimental comparison
+Generation: 2.73 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T27,mixed,Qwen — experimental comparison,project ki deadline paas hai,प्रोजेक्ट की डेडलाइन पास है,प्रोजेक्ट की समय सीमा पास है।,प्रोजेक्ट की डेडलाइन पास है,3.32,0.0,3.319,"Model: Qwen — experimental comparison
+Generation: 3.32 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T28,mixed,Qwen — experimental comparison,mujhe password yaad nahi hai,मुझे पासवर्ड याद नही है,मुझे पासवर्ड याद नहीं है।,मुझे पासवर्ड याद नहीं है।,2.94,0.0,2.94,"Model: Qwen — experimental comparison
+Generation: 2.94 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T29,mixed,Qwen — experimental comparison,meeting ka link bhej do,मीटिंग का लिंक भेज डीओ,मीटिंग का लिंक भेज दो।,मीटिंग का लिंक भेजें डीओ के लिए।,3.69,0.0,3.697,"Model: Qwen — experimental comparison
+Generation: 3.69 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T30,mixed,Qwen — experimental comparison,phone ki battery khatam hai,फोन की बैटरी खतम है,फोन की बैटरी खत्म है।,फोन की बैटरी खतम हो गई है।,3.19,0.0,3.192,"Model: Qwen — experimental comparison
+Generation: 3.19 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T31,details,Qwen — experimental comparison,anita kal pune jayegi,अनिता कल पुने जाएगी,अनीता कल पुणे जाएगी।,अनिता कल पुणे जाएगी।,2.36,0.0,2.365,"Model: Qwen — experimental comparison
+Generation: 2.36 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T32,details,Qwen — experimental comparison,rahul ne 3 kitab kharidi,राहुल ने ३ किताब खरीदी,राहुल ने 3 किताबें खरीदीं।,राहुल ने 3 किताब खरीदी गई।,3.36,0.0,3.367,"Model: Qwen — experimental comparison
+Generation: 3.36 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T33,details,Qwen — experimental comparison,mujhe 500 rupaye nahi mile,मुझे ५०० रुपये नही माइल,मुझे 500 रुपये नहीं मिले।,मुझे 500 रुपये नहीं माइल,2.98,0.0,2.981,"Model: Qwen — experimental comparison
+Generation: 2.98 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T34,details,Qwen — experimental comparison,pariksha 12 november ko hai,परीक्षा १२ नवेम्बर को है,परीक्षा 12 नवंबर को है।,परीक्षा 12 नवंबर को है।,2.62,0.0,2.62,"Model: Qwen — experimental comparison
+Generation: 2.62 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T35,details,Qwen — experimental comparison,bus 8 baje aayegi,बस ८ बाजे आयेगी,बस 8 बजे आएगी।,बस ८ बजे आएगी,1.67,0.0,1.674,"Model: Qwen — experimental comparison
+Generation: 1.67 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T36,details,Qwen — experimental comparison,priya aur aman jaipur mein hain,प्रिया और अमन जयपुर में हैं,प्रिया और अमन जयपुर में हैं।,प्रिया और अमन जयपुर में हैं।,3.09,0.0,3.094,"Model: Qwen — experimental comparison
+Generation: 3.09 seconds
+Model loading/switching: 0.00 seconds
+No substantive edit suggested. This does not confirm grammatical correctness.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T37,details,Qwen — experimental comparison,kamra 204 khali nahi hai,कामरा २०४ खाली नही है,कमरा 204 खाली नहीं है।,कामरा 204 खाली नहीं है।,2.61,0.0,2.618,"Model: Qwen — experimental comparison
+Generation: 2.61 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T38,details,Qwen — experimental comparison,mere paas 2 ticket hain,मेरे पास २ टिकेट हैं,मेरे पास 2 टिकट हैं।,मेरे पास 2 टिकेट हैं,2.2,0.0,2.198,"Model: Qwen — experimental comparison
+Generation: 2.20 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T39,details,Qwen — experimental comparison,suman ne dava nahi li,सुमन ने दावा नही ली,सुमन ने दवा नहीं ली।,सुमन ने दावा नहीं लिया गया था।,3.46,0.0,3.46,"Model: Qwen — experimental comparison
+Generation: 3.46 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
+T40,details,Qwen — experimental comparison,train 15 minute der se aayi,ट्रेन १५ मिन्यूट डेर से आयी,ट्रेन 15 मिनट देर से आई।,ट्रेन 15 मिनट डेरी से आई गई थी।,3.43,0.0,3.429,"Model: Qwen — experimental comparison
+Generation: 3.43 seconds
+Model loading/switching: 0.00 seconds
+Rewrite suggested. Check grammar and meaning before accepting.
+Saved to rewrite_results_hindi_only.csv.",,,,
