@@ -163,10 +163,17 @@ The runner imports app functions, creates a timestamped results directory, and s
 | Completed rewriting requests | 80/80 |
 | Corpus CER | 8.42% |
 | Corpus WER | 25.27% |
+| Aligned word accuracy | 139/186 (74.73%) |
 | Normalized exact sentence matches | 11/40 (27.5%) |
 | Mean conversion request time | 2.51 s |
 | Mean Param1 generation time | 1.02 s |
 | Mean Qwen generation time | 2.75 s |
+
+Aligned word accuracy is the number of exactly matched reference words
+divided by the total reference words after minimum-edit-distance word
+alignment. Ties favour more exact matches. It uses the same normalization
+as CER/WER. This run had 139 matches, 47 substitutions, no deletions and
+no insertions across 186 reference words.
 
 CER and WER use Unicode NFC, punctuation replaced by spaces, and collapsed whitespace. Case, spelling and digit script remain distinct. These are single-reference, character-codepoint metrics. Correct alternative spellings may be penalized. A separately labelled decimal-digit-normalization sensitivity analysis gives 6.84% CER, 21.51% WER and 12/40 exact matches. Do not silently substitute sensitivity results for primary results.
 
@@ -188,3 +195,22 @@ The Flask server and Gradio launch are local development configurations. Windows
 - Qwen comparison: https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507
 
 Pretrained weights are used for inference; this project does not train or fine-tune them. The 40 task-specific cases were drafted with AI assistance and supplied for student reference review; they are not sampled benchmark results from Aksharantar. Preserve applicable upstream licenses and verify exact checkpoint license files before distributing model derivatives. No model weights belong in this repository.
+
+## License checks
+
+Checked on 29 October 2026.
+
+| Resource | Published license information |
+|---|---|
+| AI4Bharat IndicXlit | Official README states that code and models use the MIT License. |
+| Qwen3-4B-Instruct-2507 | Official LICENSE file specifies Apache License 2.0. |
+| BharatGen Param1-2.9B-Instruct | Model-card metadata specifies Apache 2.0, but its licensing section states MIT. This upstream inconsistency remains unresolved. |
+
+Sources:
+- https://github.com/AI4Bharat/IndicXlit#license
+- https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/main/LICENSE
+- https://huggingface.co/bharatgenai/Param-1-2.9B-Instruct
+
+The repository contains application code and evaluation results, not
+downloaded model weights. Param1 is used for academic experimentation;
+its model card identifies research and experimentation as intended uses.
