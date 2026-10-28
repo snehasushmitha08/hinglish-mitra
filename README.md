@@ -1,65 +1,62 @@
 # Hinglish Mitra
 
-A local Roman-Hindi writing assistant for CS3235. Convert Roman Hindi to Devanagari with AI4Bharat IndicXlit, inspect alternative spellings, edit the draft, and request a Hindi rewrite from BharatGen Param1. Qwen is an additional experimental comparison backend.
+**Turn Hindi typed in English letters into Hindi script, then refine the wording.**
 
-## Features
+Hinglish Mitra is a local writing assistant built with AI4Bharat IndicXlit and BharatGen Param1. It combines script conversion, alternative word spellings, an editable draft, and AI rewriting in one interface. Qwen is available as an experimental comparison model.
 
-- Roman Hindi to Hindi-script conversion.
-- Up to ten candidate spellings for individual words, selected by the user.
-- Editable Hindi draft and separate generated suggestion.
-- Param1 as the default writing model; Qwen as a labelled comparison option.
-- One writing model loaded at a time, with 4-bit quantization.
-- Local UTF-8 CSV logging of rewriting inputs, outputs and timings.
-- Automated evaluation on 40 fixed cases.
+For example, `mujhe paani chahiye` becomes `मुझे पानी चाहिए`. This is **transliteration**: the language stays Hindi while the script changes. Rewriting is a separate step that can suggest grammar and phrasing changes.
 
-## Architecture
+## What it does
 
-The browser connects to a Gradio app running in Windows. The app requests transliteration from a Flask service in Ubuntu WSL 2 through localhost:8001. IndicXlit runs on CPU in a separate Python 3.10 environment. Param1 or Qwen runs in the Windows Python 3.12 environment on the NVIDIA GPU. Hindi rewriting uses only the editable Hindi draft; adding Roman context performed worse on the development cases.
+- **Convert:** turn Roman Hindi into Hindi script, including text with English loanwords.
+- **Choose spellings:** inspect up to ten alternatives for a word when the first conversion is wrong.
+- **Edit:** correct the Hindi draft directly before requesting a rewrite.
+- **Compare:** switch between Param1 and Qwen, with the draft and suggestion kept separate.
+- **Evaluate:** run a fixed 40-case test set and export outputs, errors, and timings.
 
-| Component | Model / software | Execution environment |
+English translation is not included. Writing suggestions can be wrong, so the final wording remains the user's decision.
+
+## How it works
+
+| Component | Role | Runs on |
 |---|---|---|
-| Transliteration | AI4Bharat IndicXlit 1.1.3 | WSL 2, Python 3.10.22, CPU |
-| Default rewriting | bharatgenai/Param-1-2.9B-Instruct | Windows, Python 3.12, GPU, 4-bit |
-| Comparison rewriting | Qwen/Qwen3-4B-Instruct-2507 | Same Windows environment |
-| Frontend | Gradio 5.49.1 | Windows, localhost:7860 |
-| Local transliteration service | Flask 3.1.2 | WSL, localhost:8001 |
+| [IndicXlit](https://github.com/AI4Bharat/IndicXlit) | Script conversion and spelling candidates | CPU in Ubuntu WSL 2 |
+| [Param1 2.9B Instruct](https://huggingface.co/bharatgenai/Param-1-2.9B-Instruct) | Default Hindi rewriting model | NVIDIA GPU on Windows |
+| [Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507) | Experimental rewriting comparison | Same GPU, loaded separately |
+| Gradio + Flask | Browser interface and local conversion service | Windows + WSL |
 
-## Hardware used
+The Windows app calls the WSL service over localhost. Both writing models use 4-bit NF4 quantization; only one is loaded at a time. All models are pretrained—no training or fine-tuning is performed.
 
-Lenovo Legion 5 laptop, AMD Ryzen 7 260, 16 GB RAM, NVIDIA GeForce RTX 5050 Laptop GPU with 8 GB VRAM. Model memory use was not measured systematically. Downloaded weights require substantially more disk space than their quantized runtime representation.
+Separate Python environments accommodate IndicXlit's older dependencies alongside the newer GPU stack. The final rewriting prompt uses the Hindi draft alone, selected after a small development comparison with Roman-context prompting.
 
-## Installation
+## Getting started
 
-The application has been exercised in the environments below. The following reconstruction instructions are based on those working package snapshots; a fresh-machine installation has not been independently tested.
+**Tested setup:** Windows 11, Ubuntu WSL 2, 16 GB RAM, and an RTX 5050 Laptop GPU with 8 GB VRAM. This is the tested configuration, not a measured minimum. Install Python 3.12 on Windows and a compatible NVIDIA driver. Initial model downloads need internet and several GB of disk space.
 
-Clone or download this repository into `C:\Projects\hinglish-mitra`, or adjust paths below. Install Python 3.12 for Windows, an appropriate NVIDIA driver, and Ubuntu through WSL 2. The exact WSL installation used Python 3.10.22 in an isolated environment; do not use Ubuntu's system Python 3.14 for these older dependencies.
+Download or clone the repository into `C:\Projects\hinglish-mitra`, or adjust the paths below. Installation instructions reflect the working environment; clean-machine reproduction has not been independently verified.
 
-### Windows: frontend and GPU writing models
+<details>
+<summary><strong>1. Set up the Windows environment</strong></summary>
 
-Run in PowerShell from the repository folder:
+Run in PowerShell:
 
 ```powershell
+cd C:\Projects\hinglish-mitra
 py -3.12 -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
 python -m pip install "torch==2.11.0+cu128" --index-url https://download.pytorch.org/whl/cu128
 python -m pip install -r requirements-windows.txt
-python -m pip check
 ```
 
-If PowerShell prevents activation, use a Command Prompt terminal and `.venv\Scripts\activate.bat`; avoid changing machine-wide execution policy just for this project.
+If activation is blocked in PowerShell, use Command Prompt and `.venv\Scripts\activate.bat`.
 
-Verify the GPU and a real calculation:
+</details>
 
-```powershell
-python -c "import torch; print(torch.__version__); print(torch.cuda.is_available()); x=torch.randn(256,256,device='cuda'); print((x @ x).mean().item())"
-```
+<details>
+<summary><strong>2. Set up the Ubuntu WSL environment</strong></summary>
 
-The requirements pin the observed working environment. Some packages in the full snapshot are transitive or leftovers from installation troubleshooting, rather than direct application dependencies.
-
-### Ubuntu WSL: CPU transliteration
-
-In Ubuntu, install build tools:
+In Ubuntu:
 
 ```bash
 sudo apt update
@@ -67,45 +64,34 @@ sudo apt install -y build-essential curl
 cd /mnt/c/Projects/hinglish-mitra
 ```
 
-If `uv` is not installed, install it using its official installer:
+Install [uv](https://docs.astral.sh/uv/) if needed:
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 source "$HOME/.local/bin/env"
 ```
 
-Create the separate Python environment:
+Create a Python 3.10 environment and install the pinned dependencies:
 
 ```bash
 uv python install 3.10
 uv venv --python 3.10 --seed .venv-xlit
 source .venv-xlit/bin/activate
-```
-
-Prepare the build environment and CPU PyTorch:
-
-```bash
 python -m pip install "pip==23.3.2" "setuptools==69.5.1" "wheel==0.43.0" "Cython==0.29.37" "numpy==1.26.4" "cffi==2.1.1"
 python -m pip install "torch==2.2.2+cpu" "torchaudio==2.2.2+cpu" --index-url https://download.pytorch.org/whl/cpu
 python -m pip install --timeout 300 --retries 10 --no-deps --no-build-isolation -r requirements-xlit.txt
 python patch_xlit.py
 ```
 
-The WSL snapshot intentionally uses `--no-deps`: automatic resolution of IndicXlit/UrduHack dependencies can install unused TensorFlow components and incompatible packages. The snapshot explicitly lists the installed packages used in this Hindi workflow. Build isolation is disabled after installing the known build tools so fairseq uses that environment. Fairseq may compile from source and take several minutes.
+Keep the pinned pip version: newer releases reject old OmegaConf metadata. `--no-deps` intentionally avoids unused upstream dependencies. Consequently, WSL's `pip check` can report omissions; only the Hindi paths used here have been validated.
 
-Keep pip at 23.3.2 in this environment: old OmegaConf metadata is rejected by newer pip releases. `pip check` in WSL can report missing upstream-declared packages such as Flask-CORS, gevent, pyarrow and UrduHack's ML dependencies. Do not claim a clean full-package dependency check. The Hindi service paths were exercised; unrelated package features are not supported or tested.
+`patch_xlit.py` defers an UrduHack import so unused TensorFlow components do not block Hindi processing. It backs up the original installed file and should be applied once after installation. It does not alter model weights. Urdu support is not validated.
 
-The committed requirements replace the original machine-specific `/tmp/fairseq-0.12.2.tar.gz` reference with `fairseq==0.12.2`. Do not commit a requirements file that depends on your own temporary archive location.
+</details>
 
-### Compatibility patch
+### Start the app
 
-`patch_xlit.py` moves the top-level UrduHack normalization import into a function so it is loaded only when requested. It backs up the installed `base_engine.py` before changing it. The patch does not change the model weights or generate fake Urdu normalization results. Urdu functionality remains unvalidated and would need its dependencies.
-
-Run the patch once after a fresh IndicXlit installation. Running it again can report `Expected import not found. No files changed.` because the original import has already been replaced. It must run inside the WSL `.venv-xlit`, not the Windows environment.
-
-### Start the application
-
-Terminal 1, Ubuntu WSL:
+**Terminal 1 — Ubuntu WSL:**
 
 ```bash
 cd /mnt/c/Projects/hinglish-mitra
@@ -113,9 +99,9 @@ source .venv-xlit/bin/activate
 python xlit_service.py
 ```
 
-Check http://localhost:8001/health shows `ready` from the Windows browser. WSL localhost forwarding is required; verify this health check before running the frontend.
+Check that [the service health endpoint](http://localhost:8001/health) shows `ready` from Windows.
 
-Terminal 2, Windows PowerShell:
+**Terminal 2 — Windows PowerShell:**
 
 ```powershell
 cd C:\Projects\hinglish-mitra
@@ -123,94 +109,57 @@ cd C:\Projects\hinglish-mitra
 python app.py
 ```
 
-Open http://localhost:7860. Keep both processes running. The first writing request loads the selected model; changing model selections unloads the old model before loading another. First use downloads several GB of original weights; 4-bit runtime loading does not mean a 4-bit-sized initial download. IndicXlit also downloads its model on first initialization.
+Open **[localhost:7860](http://localhost:7860)** and keep both processes running. The first rewrite loads the selected model; switching models takes additional time.
 
-Use Ctrl+C in a process's own terminal to stop it. Stop the Windows app before running GPU evaluation scripts to avoid keeping separate models resident in different processes.
+## Using the assistant
 
-### Troubleshooting
+1. Enter Roman Hindi and click **Convert to Hindi**.
+2. Review the Hindi draft. Edit it directly or open **Fix a transliteration spelling** to look up alternatives.
+3. Select the intended spelling, copy the incorrect Hindi text from the draft, and apply the replacement. Only the first matching occurrence is replaced.
+4. Select a writing model and click **Improve Hindi writing**.
+5. Compare the suggestion with the draft, especially names, numbers, negation, and relationships.
 
-- `No module named transformers` under `(.venv-xlit)`: use the Windows `.venv` for app/evaluation, not the IndicXlit environment.
-- Cannot reach IndicXlit: check the WSL service and `/health` first.
-- Tokenizer or configuration errors: retain Transformers 4.56.2 from the tested snapshot rather than upgrading or downgrading independently.
-- A Windows symlink-cache warning does not necessarily prevent loading; it can increase cache disk usage.
-- Slow downloads can require retries. Preserve valid cached model files rather than redownloading everything.
-- The source uses custom Param1 code through `trust_remote_code=True`; model repository revisions were not pinned in the recorded run, which limits exact future reproducibility.
-
-## Usage
-
-1. Enter Roman Hindi and select Convert to Hindi.
-2. Review the editable Hindi draft.
-3. If a spelling is wrong, open the candidate panel, look up the Roman word, choose its intended spelling, and copy the incorrect Hindi substring into the replacement field.
-4. Apply the selected spelling; the current implementation replaces its first literal occurrence.
-5. Select a writing model and request a rewrite.
-6. Compare the suggestion against your draft before using it.
-
-Candidate order is not a confidence probability. User-selected correction is not automatic model accuracy. The tool may transliterate English loanwords rather than translate them.
+Inputs are limited to 100 words and 2000 characters, with additional token limits. Rewriting inputs, outputs, model names, and timings are saved locally in `rewrite_results_hindi_only.csv`.
 
 ## Evaluation
 
-With the Windows app stopped and the WSL service running:
+The custom test set contains **40 cases** covering everyday sentences, grammar errors, Hindi-English mixing, and preservation of names, numbers, dates, and negation. Cases were drafted with AI assistance and supplied for student reference review; they were not sampled from Aksharantar.
+
+| Conversion metric | Result |
+|---|---:|
+| Character Error Rate | **8.42%** |
+| Word Error Rate | **25.27%** |
+| Aligned word accuracy | **74.73%** — 139/186 words |
+| Exact sentence matches after normalization | **27.5%** — 11/40 cases |
+
+All 40 conversions and 80 rewriting requests completed. Mean conversion time was **2.51 s**; mean generation time was **1.02 s** for Param1 and **2.75 s** for Qwen. Loading time is excluded, and model settings differ, so these are observed timings rather than a controlled speed benchmark.
+
+Metrics use Unicode NFC, punctuation-to-space replacement, and collapsed whitespace. Word accuracy counts exact matches after minimum-edit-distance alignment, favouring more matches in ties: 139 matches and 47 substitutions, with no insertions or deletions. Single references can penalize valid spelling and digit-script alternatives.
+
+### Reproduce the evaluation
+
+Keep the WSL service running, stop the Windows app to release GPU memory, and run in the Windows environment:
 
 ```powershell
 python evaluate.py
 ```
 
-The runner imports app functions, creates a timestamped results directory, and saves each completed result. It tests 40 automatic conversions and 40 rewrites for each of two models. No manual candidate correction is performed in this evaluation.
+Results are saved in a timestamped folder. Each writing model receives the actual IndicXlit output; manual spelling corrections are excluded. [Recorded results](evaluation_20261029_013004_568731/) include raw outputs and metrics. [Development experiments](prompt_comparison.csv) are separate from this final set.
 
-| Primary metric | Observed result |
-|---|---:|
-| Successful conversions | 40/40 |
-| Completed rewriting requests | 80/80 |
-| Corpus CER | 8.42% |
-| Corpus WER | 25.27% |
-| Aligned word accuracy | 139/186 (74.73%) |
-| Normalized exact sentence matches | 11/40 (27.5%) |
-| Mean conversion request time | 2.51 s |
-| Mean Param1 generation time | 1.02 s |
-| Mean Qwen generation time | 2.75 s |
+Conversion scores do not measure rewriting quality. The [AI-assisted writing review](AI_assisted_evaluation_review.md) assesses grammar and meaning separately; only the student corrections explicitly recorded there are confirmed.
 
-Aligned word accuracy is the number of exactly matched reference words
-divided by the total reference words after minimum-edit-distance word
-alignment. Ties favour more exact matches. It uses the same normalization
-as CER/WER. This run had 139 matches, 47 substitutions, no deletions and
-no insertions across 186 reference words.
+## Known limitations
 
-CER and WER use Unicode NFC, punctuation replaced by spaces, and collapsed whitespace. Case, spelling and digit script remain distinct. These are single-reference, character-codepoint metrics. Correct alternative spellings may be penalized. A separately labelled decimal-digit-normalization sensitivity analysis gives 6.84% CER, 21.51% WER and 12/40 exact matches. Do not silently substitute sensitivity results for primary results.
+Incorrect conversion can propagate into rewriting. In one evaluated case, **दवा** (medicine) became **दावा** (claim), and the writing models continued with the wrong meaning. Models also retained grammatical errors, introduced negation, or changed requests into completed actions.
 
-Generation times exclude model loading. Attention and caching configurations differ by model; the run is not a controlled speed benchmark. Request success means execution completed, not that the language output was correct.
+Spelling alternatives provide a user-assisted recovery mechanism, not guaranteed automatic correction. The application is intended for reviewed writing suggestions, and its 40-case evaluation does not establish reliability across all Hindi usage. Model revisions were not pinned in the recorded run, limiting exact future reproducibility.
 
-Writing quality requires review of fluency and meaning separately. The AI-assisted draft review records student corrections for T05, T15 and T31 in both models. The other ratings have not been confirmed, so no final aggregate writing-quality score is claimed.
+## Model licenses
 
-## Limitations
+Checked on 29 October 2026:
 
-The system sometimes misreads Roman words, preserves grammatical errors, changes negation or relationships, or rewrites requests as completed actions. Example: an upstream दवा to दावा conversion led to downstream outputs about a claim rather than medicine. Candidate selection helps users inspect alternatives but does not establish reliable automatic correction. Input is limited to 100 words and 2000 characters, with an additional token limit and bounded output generation.
+- **IndicXlit:** its [official README](https://github.com/AI4Bharat/IndicXlit#license) states that code and models use MIT.
+- **Qwen:** its [LICENSE](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/main/LICENSE) specifies Apache 2.0.
+- **Param1:** its [model card](https://huggingface.co/bharatgenai/Param-1-2.9B-Instruct) lists Apache 2.0 in metadata but MIT in the licensing section. This upstream inconsistency remains unresolved; stated intended uses include research and experimentation.
 
-The Flask server and Gradio launch are local development configurations. Windows and WSL must remain running. Rewriting text is saved in local CSV logs; use synthetic examples for the demo and review files before publishing them.
-
-## Sources and attribution
-
-- IndicXlit: https://github.com/AI4Bharat/IndicXlit
-- Aksharantar background: https://github.com/AI4Bharat/IndianNLP-Transliteration
-- Param1: https://huggingface.co/bharatgenai/Param-1-2.9B-Instruct
-- Qwen comparison: https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507
-
-Pretrained weights are used for inference; this project does not train or fine-tune them. The 40 task-specific cases were drafted with AI assistance and supplied for student reference review; they are not sampled benchmark results from Aksharantar. Preserve applicable upstream licenses and verify exact checkpoint license files before distributing model derivatives. No model weights belong in this repository.
-
-## License checks
-
-Checked on 29 October 2026.
-
-| Resource | Published license information |
-|---|---|
-| AI4Bharat IndicXlit | Official README states that code and models use the MIT License. |
-| Qwen3-4B-Instruct-2507 | Official LICENSE file specifies Apache License 2.0. |
-| BharatGen Param1-2.9B-Instruct | Model-card metadata specifies Apache 2.0, but its licensing section states MIT. This upstream inconsistency remains unresolved. |
-
-Sources:
-- https://github.com/AI4Bharat/IndicXlit#license
-- https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507/blob/main/LICENSE
-- https://huggingface.co/bharatgenai/Param-1-2.9B-Instruct
-
-The repository contains application code and evaluation results, not
-downloaded model weights. Param1 is used for academic experimentation;
-its model card identifies research and experimentation as intended uses.
+Model weights are downloaded from their publishers and are not included in this repository.
